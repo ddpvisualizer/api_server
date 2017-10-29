@@ -7,23 +7,26 @@ const MONGODB_SERVER = process.env.MONGODB_SERVER
 
 mongoose.connect(`mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_SERVER}`, { useMongoClient: true });
 
-const County = mongoose.model('County', new Schema({
+let countySchema = {
     name: {type: String, unique: true, required: true},
     state: String,
-    flips: String,
+    fips: String,
     favored: {type: Boolean, 'default': false},
-    years: [{
-      year: String,
-      number: String,
-      percent: String,
-      lowerConfidenceLimit: String,
-      upperConfidenceLimit: String,
-      ageAjustedPercent: String,
-      ageAjustedLowerConfidenceLimit: String,
-      ageAjustedUpperConfidenceLimit: String
+    metrics: [{
+      name: String,
+      years: [{
+        year: String,
+        number: String,
+        percent: String,
+        lowerConfidenceLimit: String,
+        upperConfidenceLimit: String,
+        ageAjustedPercent: String,
+        ageAjustedLowerConfidenceLimit: String,
+        ageAjustedUpperConfidenceLimit: String
+      }]
     }]
-}))
+};
 
 module.exports = {
-    County
+    County: mongoose.model('County', new Schema(countySchema))
 };
