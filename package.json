@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ddpvisualizer/api_server#readme",
   "dependencies": {
+    "csvtojson": "^1.1.9",
     "hapi": "^16.6.2",
     "mongoose": "^4.12.4"
   }

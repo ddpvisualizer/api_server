@@ -1,4 +1,4 @@
-//const XLSX = require('xlsx');
+const csvParser = require('../libs/csv-parser.js')
 
 module.exports = {
     method: 'POST',
@@ -12,11 +12,9 @@ module.exports = {
         }
     },
     handler: function (request, reply) {
-        //const requestData = request.payload;
-        //let result = XLSX.read(requestData.file);
-        //result = XLSX.utils.sheet_to_json(result.Sheets[result.SheetNames[0]]);
-        //console.log(result)
-        //reply(JSON.st);
-        //reply(Object.keys(request.body));
+        let file = request.payload.file
+        csvParser(file)
+          .then(parsedFile => reply(JSON.stringify(parsedFile)))
+          .catch(error => reply(error))
     }
-};
+}
