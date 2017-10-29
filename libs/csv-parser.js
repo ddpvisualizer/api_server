@@ -29,9 +29,8 @@ module.exports = (csvString) => new Promise((resolve, reject) => {
           lowerConfidenceLimit: csvRow[year.index + 2],
           upperConfidenceLimit: csvRow[year.index + 3],
           ageAjustedPercent: csvRow[year.index + 4],
-          ageAjustedPercent: csvRow[year.index + 5],
-          ageAjustedLowerConfidenceLimit: csvRow[year.index + 6],
-          ageAjustedUpperConfidenceLimit: csvRow[year.index + 7]
+          ageAjustedLowerConfidenceLimit: csvRow[year.index + 5],
+          ageAjustedUpperConfidenceLimit: csvRow[year.index + 6]
         }))
 
         counties.push(county);
