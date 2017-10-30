@@ -8,7 +8,7 @@ module.exports = {
         const favored = request.payload.favored || false
 
         County.update({fips}, {favored})
-            .then(county => reply('succeed'))
+            .then(() => reply('succeed'))
             .catch(error => reply(error))
     }
 };

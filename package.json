@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/libs/test-preprocessor.js --recursive src/**/**/__tests__/*.test.js"
+    "test": "node_modules/.bin/mocha src/libs/test-preprocessor.js --recursive src/**/**/__tests__/*.test.js"
   },
   "repository": {
     "type": "git",
