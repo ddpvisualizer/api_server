@@ -1,5 +1,3 @@
-'use strict';
-
 const Hapi = require('hapi')
 
 const server = new Hapi.Server()
@@ -11,8 +9,8 @@ server.connection({
 server.route(require('./routes/post-counties.js'))
 server.route(require('./routes/get-county.js'))
 server.route(require('./routes/get-counties.js'))
+server.route(require('./routes/put-favored.js'))
 
-// Start the server
 server.start((err) => {
 
     if (err) {

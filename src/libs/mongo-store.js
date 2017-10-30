@@ -6,11 +6,12 @@ const MONGODB_PASSWORD = process.env.MONGODB_PASSWORD
 const MONGODB_SERVER = process.env.MONGODB_SERVER
 
 mongoose.connect(`mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@${MONGODB_SERVER}`, { useMongoClient: true });
+mongoose.Promise = global.Promise;
 
 let countySchema = {
-    name: {type: String, unique: true, required: true},
+    name: String,
     state: String,
-    fips: String,
+    fips: {type: String, unique: true},
     favored: {type: Boolean, 'default': false},
     metrics: [{
       name: String,

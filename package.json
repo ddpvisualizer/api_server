@@ -2,9 +2,9 @@
   "name": "dppvisualizer_api_server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/libs/test-preprocessor.js --recursive src/**/**/__tests__/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,13 @@
     "hapi": "^16.6.2",
     "joi": "^13.0.1",
     "mongoose": "^4.12.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^4.0.1",
+    "proxyquire": "^1.8.0",
+    "sinon": "^4.0.2",
+    "sinon-chai": "^2.14.0"
   }
 }

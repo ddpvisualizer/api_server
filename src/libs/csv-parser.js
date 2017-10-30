@@ -7,7 +7,7 @@ module.exports = (csvString) => new Promise((resolve, reject) => {
 
   csv({noheader: true})
     .fromString(csvString)
-    .on('csv',(csvRow) => {
+    .on('csv', (csvRow) => {
       if(rowIndex === 0) {
         csvRow.forEach((cell, cellIndex) => {
           if(cell.length === 4) years.push({
