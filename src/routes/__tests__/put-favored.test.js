@@ -27,7 +27,7 @@ describe('/puth-favored', () => {
         )
 
         return setTimeout(() => {
-            expect(reply).to.have.been.calledOnce()
+            expect(reply).to.have.been.called
             expect(reply).to.have.been.calledWithMatch('succeed')
         }, 0)
     })

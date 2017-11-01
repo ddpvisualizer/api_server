@@ -33,7 +33,7 @@ describe('/get-counties', () => {
         expect(countySchemaMock.find).to.have.been.calledWithMatch({}, {fips: true, name: true, favored: true, state: true})
 
         return setTimeout(() => {
-            expect(reply).to.have.been.calledOnce()
+            expect(reply).to.have.been.called
             expect(reply).to.have.been.calledWithMatch(countiesMock)
         }, 0)
     })

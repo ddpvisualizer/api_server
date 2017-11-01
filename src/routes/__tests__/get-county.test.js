@@ -35,7 +35,7 @@ describe('/get-county', () => {
         expect(countySchemaMock.findOne).to.have.been.calledWithMatch({fips: 'MOCK_FIPS'})
 
         return setTimeout(() => {
-            expect(reply).to.have.been.calledOnce()
+            expect(reply).to.have.been.called
             expect(reply).to.have.been.calledWithMatch(countyMock)
         }, 0)
     })
