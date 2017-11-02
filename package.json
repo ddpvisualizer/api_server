@@ -1,5 +1,5 @@
 {
-  "name": "dppvisualizer_api_server",
+  "name": "ddpvisualizer_api_server",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",

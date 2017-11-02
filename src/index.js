@@ -3,7 +3,12 @@ const Hapi = require('hapi')
 const server = new Hapi.Server()
 server.connection({
     host: '0.0.0.0',
-    port: process.env.PORT
+    port: process.env.PORT,
+    config: {
+        cors: {
+            origin: ['*']
+        }
+    }
 })
 
 server.route(require('./routes/post-counties.js'))
