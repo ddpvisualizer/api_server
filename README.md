@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ddpvisualizer/api_server.svg?branch=master)](https://travis-ci.org/ddpvisualizer/api_server)
 
-The goal of this project is to create an api server that recieves data from [Center for Disease Control and Prevention](https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html), stores it its in a database and can be retrieved in a efficient way.
+The goal of this project is to create an api server that receives data from [Center for Disease Control and Prevention](https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html), stores it its in a database and can be retrieved in a efficient way.
 
 ### Technology stack
 * The API server runs on a NodeJS platform with [HapiJS](https://hapijs.com/). The data is stored in a [MongoDB](https://www.mongodb.com/) by using [mongoose](http://mongoosejs.com/).
