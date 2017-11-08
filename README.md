@@ -58,6 +58,7 @@ Testing is done with [Mocha](https://mochajs.org/), [sinon](http://sinonjs.org/)
 1. Create more path for editing/adding years/diseases in a county.
 2. Add test for mongo-store
 3. Add a linter and define code standards.
+4. Paths shuld respect REST standards
 
 
 **API Documentation**
